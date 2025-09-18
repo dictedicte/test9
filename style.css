@@ -729,7 +729,8 @@ body{
     }
     .entry .album ol li{
         margin-left: 15px;
-        height: 15px;
+        height: fit-content;
+        min-height: 15px;
         line-height: 15px;
         position: relative;
         width: fit-content;
