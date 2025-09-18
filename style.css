@@ -427,7 +427,10 @@ body{
     opacity: 0;
 }
 
-.entry a,.entry .links{
+
+
+
+.entry .link,.entry .links{
     position: relative;
     width: 36px;
     height: 36px;
@@ -444,23 +447,77 @@ body{
     width: 32px;
     height: 32px;
     filter: drop-shadow(0.25px 0.25px 2px #a98eca31);
-
+    z-index: 100;
 }
-.entry a{
+.entry .link{
     cursor: pointer;
     background-image: url(images/open_in_new_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
 }
-.entry a:hover,.entry .links:hover{
+.entry .link:hover,.entry .links:hover{
     background-color: #a98eca;
     filter: drop-shadow(0.25px 0.25px 2px #a98eca51);
 }
-.entry a:active{
+.entry .link:active{
     background-color: #9479b6;
     filter: drop-shadow(0.25px 0.25px 2px white) drop-shadow(0.25px 0.25px 2px #a98eca51);
 }
 
 .entry .links .list{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: white;
+    width: max-content;
+    height: fit-content;
+    top: 33px;
+    right: 0;
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 1.5px;
+}
+.entry .links:hover .list{
+   visibility: visible; 
+   opacity: 1;
+}
+.entry .links .list a{
+    color: white;
+    background-color: #b89fd7;
+    text-shadow: none;
+    width: 100%;
+    padding: 3px 8px;
+    padding-right: 21px;
+    font-size: 12px;
+    font-weight: 550;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    border-bottom: solid 1px #dbc9ee95;
+    position: relative;
+    box-sizing: border-box;
+}
+.entry .links .list a::after{
+    content: "";
+    position: absolute;
+    background-image: url(images/open_in_new_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    width: 18px;
+    height: 18px;
+    right: 3px;
+}
+.entry .links .list a:last-child{
+    border-bottom: none;
+}
 
+.entry .links .list a:hover{
+    background-color: #a98eca;
+    filter: drop-shadow(0.25px 0.25px 2px #a98eca51);
 }
 
 
@@ -482,10 +539,11 @@ body{
     background-image: url(images/arrow_drop_down_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 55%;
-    width: 100%;
-    height: 100%;
+    background-size: 120%;
+    width: 40%;
+    height: 40%;
     transform: translateY(7px) translateX(5px);
+    transform: translateY(17px) translateX(10px);
 }
 
 
@@ -666,24 +724,33 @@ body{
     }
 
     .entry .album ol{
-        margin-bottom: 6px;
+        margin-bottom: 3px;
+        list-style-position: inside;
     }
     .entry .album ol li{
-        margin-left: 25px;
+        margin-left: 15px;
         height: 15px;
         line-height: 15px;
         position: relative;
         width: fit-content;
     }
     .entry .album ol li .duration{
-        margin-left: 25px;
+        margin-left: 27px;
         color: #d3c2e3cd;
         position: absolute;
-        right: -30px;
+        right: -27px;
         top: 0;
         font-size: 9px;
         font-style: italic;
     }
+    /*
+    .entry .album ol li .duration::before{
+        content: "•";
+        position: absolute;
+        left: -6px;
+            color: #d3c2e36a;
+    }
+    */
     .entry .album .dvd,.entry .album .cd{
         margin-left: 15px;
         position: relative;
@@ -694,6 +761,7 @@ body{
         color: #836f9a;
         margin-bottom: 3px;
         margin-top: 3px;
+        width: fit-content;
     }
     .entry .album .dvd::before,.entry .album .cd::before{
         content: "";
@@ -703,7 +771,7 @@ body{
         background-position: center;
         background-repeat: no-repeat;
         background-size: 80%;
-        left: -15px;
+        left: -16px;
     }
         .entry .album .cd::before{
             background-image: url(images/icons/cd.png);
