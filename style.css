@@ -735,8 +735,6 @@ body{
         position: relative;
         width: fit-content;
         max-width: 80%;
-        border: solid 1px yellow;
-        overflow: hidden;
     }
     .entry .album ol li .duration{
         margin-left: 27px;
@@ -920,3 +918,4 @@ body{
     }
     
 }
+
