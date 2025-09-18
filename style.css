@@ -725,7 +725,7 @@ body{
 
     .entry .album ol{
         margin-bottom: 3px;
-        list-style-position: inside;
+        margin-left: 10px;
     }
     .entry .album ol li{
         margin-left: 15px;
@@ -918,4 +918,3 @@ body{
     }
     
 }
-
