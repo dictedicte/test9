@@ -80,21 +80,27 @@ body{
     height: fit-content;
     background-color: #ffffff;
     position: absolute;
-    right: 50px;
-    top: 50px;
+    right: 0px;
+    top: 56px;
     z-index: 600;
     visibility: hidden;
     opacity: 0;
+    scale: 0.5;
+    transform-origin: top right;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 8px;
+    padding: 12px;
     border-radius: 10px;
     cursor: default;
+    padding-top: 6px;
+        filter: drop-shadow(0px 1px 2px #a98eca7e);
+
 }
 .header #settings:hover .settings{
     visibility: visible;
     opacity: 1;
+    scale: 1;
 }
 .header #settings .settings h2{
     color: #7747b2;
@@ -103,30 +109,94 @@ body{
     padding: 0 10px;
 }
 .header #settings .settings h3{
-    color: #7747b2;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 0 10px;
-    width: 90%;
+    color: #836f9a;
+    font-weight: 800;
+    font-size: 12px;
+    width: 100%;
     text-wrap: nowrap;
-    border-top: solid 2px #7747b2;
-    text-align: center;
+    margin-top: 6px;
+    padding-right: 12px;
+    box-sizing: border-box;
 }
+.header #settings .settings h3::after{
+    content: ":";
+    position: relative;
+}
+
+.header #settings .settings div{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    height: fit-content;
+        filter: drop-shadow(0.25px 0.25px 2px #a98eca57);
+
+}
+
 .header #settings .settings p{
     color: #7747b2;
-    font-weight: 550;
+    font-weight: 500;
     font-style: italic;
     font-size: 12px;
-    text-align: end;
+    text-align: start;
 }
 .header #settings .settings button{
-    background-color: #7747b2;
+    color: white;
+    background-color: #b89fd7;
     padding: 3px 6px;
-    border-radius: 5px;
     font-weight: 600;
     cursor: pointer;
-    min-width: 40px;
+    width: 100%;
+    position: relative;
+    text-shadow: 0 0 3px transparent;
+    text-align: start;
+    padding-left: 25px;
+    height: 25px;
 }
+.header #settings .settings button:first-child{
+    border-bottom: solid 1px #dbc9ee95;
+}
+.header #settings .settings button b{
+    position: absolute;
+    outline:solid 1px #ffffff80;
+    background-color: transparent;
+    border-radius: 100%;
+    border:solid  3px #b89fd7;
+    width: 12px;
+    height: 12px;
+    left: 6.5px;
+    top: 6.5px;
+    box-sizing: border-box;
+}
+.header #settings .settings button b::after{
+    content: "";
+    position: absolute;
+    outline:solid 1px transparent;
+    background-color: transparent;
+    border-radius: 100%;
+    border:solid  3px transparent;
+    width: 12px;
+    height: 12px;
+    left: -2.25px;
+    top: -2.25px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition-duration: 0.3s;
+    scale: 0;
+}
+.header #settings .settings button:hover{
+    background-color: #af93cf;
+}
+.header #settings .settings button:hover b{
+    border-color: #af93cf;
+}
+
+.header #settings .settings button:hover b::after{
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+    scale: 0.6;
+}
+
 /*HEADER ↑*/
 
 
@@ -465,31 +535,35 @@ body{
 .entry .links .list{
     visibility: hidden;
     opacity: 0;
+    transform-origin: top right;
+    scale: 0.6;
     position: absolute;
     background-color: white;
     width: max-content;
     height: fit-content;
-    top: 33px;
-    right: 0;
+    right: 33px;
     border-radius: 10px;
     flex-direction: column;
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 1.5px;
+    margin-right: 6px;
+        filter: drop-shadow(0px 1px 2px #a98eca7e);
+
 }
 .entry .links:hover .list{
    visibility: visible; 
    opacity: 1;
+   scale: 1;
 }
 .entry .links .list a{
     color: white;
     background-color: #b89fd7;
     text-shadow: none;
     width: 100%;
-    padding: 3px 8px;
+    padding: 4px 8px;
     padding-right: 21px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 550;
     text-transform: uppercase;
     text-decoration: none;
@@ -506,7 +580,7 @@ body{
     background-image: url(images/open_in_new_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.svg);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 65%;
+    background-size: 80%;
     width: 18px;
     height: 18px;
     right: 3px;
@@ -530,9 +604,8 @@ body{
     background-size: 70%;
     width: 100%;
     height: 100%;
-    transform: rotate(-33.75deg) translateY(-1px);
-    transform: translateY(-1px);
 }
+/*
 .entry .links::after{
     content: "";
     position: absolute;
@@ -545,7 +618,7 @@ body{
     transform: translateY(7px) translateX(5px);
     transform: translateY(17px) translateX(10px);
 }
-
+*/
 
 
 /*ICONS ↓*/
@@ -723,6 +796,111 @@ body{
         padding-bottom: 6px;
     }
 
+
+
+
+    .entry .album ul{
+        margin-bottom: 3px;
+        margin-left: 10px;
+        list-style-type: none;
+    }
+    .entry .album ul li{
+        margin-left: 6px;
+        height: fit-content;
+        min-height: 15px;
+        line-height: 15px;
+        position: relative;
+        width: fit-content;
+        max-width: 80%;
+    }
+    .entry .album ul li::before{
+        content: "1";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+        text-align: center;
+        left: -15px;
+        color: #d4c8e1cd;
+
+        
+        font-weight: 900;
+    }
+    .entry .album ul li:first-child:before{
+        content: "1";
+    }
+    .entry .album ul li:nth-child(2):before{
+        content: "2";
+    }
+    .entry .album ul li:nth-child(3):before{
+        content: "3";
+    }
+    .entry .album ul li:nth-child(4):before{
+        content: "4";
+    }
+    .entry .album ul li:nth-child(5):before{
+        content: "5";
+    }
+    .entry .album ul li:nth-child(6):before{
+        content: "6";
+    }
+    .entry .album ul li:nth-child(7):before{
+        content: "7";
+    }
+    .entry .album ul li:nth-child(8):before{
+        content: "8";
+    }
+    .entry .album ul li:nth-child(9):before{
+        content: "9";
+    }
+    .entry .album ul li:nth-child(10):before{
+        content: "10";
+    }
+    .entry .album ul li:nth-child(11):before{
+        content: "11";
+    }
+    .entry .album ul li:nth-child(12):before{
+        content: "12";
+    }
+    .entry .album ul li:nth-child(13):before{
+        content: "13";
+    }
+    .entry .album ul li:nth-child(14):before{
+        content: "14";
+    }
+    .entry .album ul li:nth-child(15):before{
+        content: "15";
+    }
+    .entry .album ul li:nth-child(16):before{
+        content: "16";
+    }
+    .entry .album ul li:nth-child(17):before{
+        content: "17";
+    }
+    .entry .album ul li:nth-child(18):before{
+        content: "18";
+    }
+    .entry .album ul li:nth-child(19):before{
+        content: "19";
+    }
+    .entry .album ul li:nth-child(20):before{
+        content: "20";
+    }
+
+
+
+    .entry .album ul li .duration{
+        margin-left: 27px;
+        color: #d3c2e3cd;
+        position: absolute;
+        right: -27px;
+        top: 0;
+        font-size: 9px;
+        font-style: italic;
+    }
+
+
+
     .entry .album ol{
         margin-bottom: 3px;
         margin-left: 10px;
@@ -764,6 +942,7 @@ body{
         margin-bottom: 3px;
         margin-top: 3px;
         width: fit-content;
+
     }
     .entry .album .dvd::before,.entry .album .cd::before{
         content: "";
@@ -774,6 +953,8 @@ body{
         background-repeat: no-repeat;
         background-size: 80%;
         left: -16px;
+            filter: drop-shadow(0.25px 0.25px 0.5px #a98ecad8);
+
     }
         .entry .album .cd::before{
             background-image: url(images/icons/cd.png);
