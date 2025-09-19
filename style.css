@@ -3,6 +3,8 @@
     transition-property: all;
     transition-duration: 1s;
     transition-duration: 0.2s;
+      -webkit-tap-highlight-color: transparent;
+
 }
 
 body{
@@ -167,6 +169,7 @@ body{
     top: 6.5px;
     box-sizing: border-box;
 }
+/*
 .header #settings .settings button b::after{
     content: "";
     position: absolute;
@@ -183,6 +186,7 @@ body{
     transition-duration: 0.3s;
     scale: 0;
 }
+    */
 .header #settings .settings button:hover{
     background-color: #af93cf;
 }
@@ -190,12 +194,14 @@ body{
     border-color: #af93cf;
 }
 
+/*
 .header #settings .settings button:hover b::after{
     border-color: transparent;
     background-color: rgba(255, 255, 255, 0.15);
     opacity: 1;
     scale: 0.6;
 }
+    */
 
 /*HEADER ↑*/
 
