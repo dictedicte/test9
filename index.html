@@ -12,20 +12,28 @@
         <h1>2025</h1>
         <div id="settings">
             <div class="settings">
-                <h2>SETTINGS</h2>
+                <!-- <h2>SETTINGS</h2>-->
                 <h3>ORDER</h3>
-                    <button onclick=newestfirst()>NEWEST FIRST</button>
-                    <button onclick=oldestfirst()>OLDEST FIRST</button>
-                <h3>SHOW WEEKDAYS</h3>
-                    <button onclick=showweekdaysyes()>YES</button>
-                    <button onclick=showweekdaysno()>NO</button>
-                <h3>SHOW TIME</h3>
-                    <button onclick=showtimeyes()>YES</button>
-                    <button onclick=showtimeno()>NO</button>
+                <div>
+                    <button onclick=NewestFirst()>NEWEST FIRST<b id="NewestFirst"></b></button>
+                    <button onclick=OldestFirst()>OLDEST FIRST<b id="OldestFirst"></b></button>
+                </div>
+                <h3>WEEKDAYS</h3>
+                <div>
+                    <button onclick=ShowWeekdays()>SHOW<b id="ShowWeekdays"></b></button>
+                    <button onclick=HideWeekdays()>HIDE<b id="HideWeekdays"></b></button>
+                </div>
+                <h3>TIME</h3>
+                <div>
+                    <button onclick=ShowTime()>SHOW<b id="ShowTime"></b></button>
+                    <button onclick=HideTime()>HIDE<b id="HideTime"></b></button>
+                </div>
                 <h3>LANGUAGE PRIORITY</h3>
-                    <button onclick=languageenglish()>ENGLISH</button>
-                    <button onclick=languagekorean()>KOREAN</button>
-                    <p>You can use the translator in your browser to translate the entire page</p>
+                <div>
+                    <button onclick=LanguageEnglish()>ENGLISH<b id="LanguageEnglish"></b></button>
+                    <button onclick=LanguageKorean()>KOREAN<b id="LanguageKorean"></b></button>
+                </div>
+                    <!--<p>You can use the translator in your browser to translate the entire page</p>-->
             </div>
         </div>
     </div>
@@ -37,7 +45,6 @@
         <div class="year-overlay"><div class="date"><div class="year">2025</div></div>
         <div class="month-overlay"><div class="date"><div class="month">JUNE</div></div>
         <div class="day-overlay"><div class="day">9<div class="weekday">FRIDAY</div></div>
-
 
 
             <div class="entry">
@@ -56,12 +63,12 @@
 
                 <div class="album">
                     <div class="cd">DISC 1</div>
-                    <ol type="1">
+                    <ol>
                         <li>Intro: The Most Beautiful Moment in Life</li>
                         <li>I Need U</li>
                         <li>Hold Me Tight</li>
                         <li>Autumn Leaves</li>
-                        <li>Butterfly (Prologue Mix)</li>
+                        <li>Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix) Butterfly (Prologue Mix)</li>
                         <li>Run</li>
                         <li>Ma City</li>
                     </ol>
@@ -80,8 +87,6 @@
                 <div class="details">
                     <div class="duration">00:23:41</div>
                 </div>
-
-
             </div>
 
             
@@ -90,12 +95,11 @@
                     <div class="icon instagram"></div>
                     <strong>@RKIVE INSTAGRAM POST</strong>
                     <p>me cook (yes america)</p>
-                    <a class="link" target="_blank" ></a>
+                    <a class="link" target="_blank" href="https://www.instagram.com/rkive/p/DMEleEzvi03/" ></a>
                 </div>
 
                 <div class="details">
-                    <div class="image">4</div>
-                    <div class="video">3</div>
+                    <div class="image">9</div>
                 </div>
             </div>
 
@@ -212,7 +216,7 @@
 
                 <div class="album">
                     <div class="cd">DISC 1</div>
-                    <ol type="1">
+                    <ol>
                         <li>Intro: 2 Cool 4 Skool<div class="duration">01:03</div></li>
                         <li>We Are Bulletproof Pt.2<div class="duration">03:43</div></li>
                         <li>Skit: Circle Room Talk<div class="duration">02:11</div></li>
@@ -313,10 +317,19 @@
                 <div class="time">16:32</div>
                 <div class="main">
                     <div class="icon tv"></div>
-                    <strong>BON VOYAGE SEASON 2 EPISODE 4</strong>
+                    <strong>REALITY SHOW "ARE YOU SURE?!" EPISODE 3</strong>
                     <p>This is the title of the episode</p>
-                    <a class="link" target="_blank" href="https://www.facebook.com/photo/?fbid=657620384253227&set=a.647741721907760"></a>
+                    <div class="links">
+                        <div class="list">
+                            <a target="_blank" href="">WEVERSE</a>
+                            <a target="_blank" href="">DISNEY+</a>
+                        </div>
+                    </div>
                 </div>
+                
+                    <div class="details">
+                        <div class="video">00:42:13</div>
+                    </div>
             </div>
             <div class="entry">
                 <div class="time">16:32</div>
@@ -373,7 +386,7 @@
                 
                 <div class="album">
                     <div class="dvd" title="dvd">DISC 1</div>
-                    <ol type="1">
+                    <ol>
                         <li>OPENING</li>
                         <li>N.O</li>
                         <li>チョアヨ</li>
@@ -403,7 +416,7 @@
                 
                 <div class="album">
                     <div class="cd" title="cd">DISC 1</div>
-                    <ol type="1">
+                    <ol>
                         <li>Intro.</li>
                         <li>The Stars</li>
                         <li>Jump - Japanese Ver.</li>
@@ -419,7 +432,7 @@
                         <li>Outro.</li>
                     </ol>
                     <div class="dvd" title="dvd">DISC 2 ＜First Press Limited Edition A＞</div>
-                    <ol type="1">
+                    <ol>
                         <li>BTS Japan Official Fan Meeting Vol.1 at TOKYO DOME CITY HALL</li>
                     </ol>
                     <div class="dvd" title="dvd">DISC 2 ＜First Press Limited Edition B＞</div>
@@ -646,7 +659,10 @@
     </div>
     </div>
 <script>
-    function newestfirst(){
+    function NewestFirst(){
+        document.getElementById("NewestFirst").style.backgroundColor = "#ffffffbf";
+        document.getElementById("OldestFirst").style.backgroundColor = "transparent";
+
         const selectedElements = document.querySelectorAll(".year-overlay");
             selectedElements.forEach((element) => {
                 element.style.flexDirection = "column";
@@ -662,7 +678,10 @@
                 element.style.flexDirection = "column";
             });
     }
-    function oldestfirst(){
+    function OldestFirst(){
+        document.getElementById("OldestFirst").style.backgroundColor = "#ffffffbf";
+        document.getElementById("NewestFirst").style.backgroundColor = "transparent";
+
         const selectedElements = document.querySelectorAll(".year-overlay");
             selectedElements.forEach((element) => {
                 element.style.flexDirection = "column-reverse";
@@ -679,7 +698,10 @@
             });
     }
 
-    function showtimeno(){
+    function HideTime(){
+        document.getElementById("HideTime").style.backgroundColor = "#ffffffbf";
+        document.getElementById("ShowTime").style.backgroundColor = "transparent";
+
         const selectedElements = document.querySelectorAll(".entry .time");
         
         selectedElements.forEach((element) => {
@@ -687,7 +709,11 @@
             element.style.opacity = "0";
         });
     }
-    function showtimeyes(){
+    function ShowTime(){
+        document.getElementById("ShowTime").style.backgroundColor = "#ffffffbf";
+        document.getElementById("HideTime").style.backgroundColor = "transparent";
+
+
         const selectedElements = document.querySelectorAll(".entry .time");
         
         selectedElements.forEach((element) => {
@@ -696,7 +722,10 @@
         });
     }
 
-    function showweekdaysno(){
+    function HideWeekdays(){
+        document.getElementById("HideWeekdays").style.backgroundColor = "#ffffffbf";
+        document.getElementById("ShowWeekdays").style.backgroundColor = "transparent";
+
         const selectedElements = document.querySelectorAll(".day .weekday");
         
         selectedElements.forEach((element) => {
@@ -704,7 +733,10 @@
             element.style.opacity = "0";
         });
     }
-    function showweekdaysyes(){
+    function ShowWeekdays(){
+        document.getElementById("ShowWeekdays").style.backgroundColor = "#ffffffbf";
+        document.getElementById("HideWeekdays").style.backgroundColor = "transparent";
+
         const selectedElements = document.querySelectorAll(".day .weekday");
         
         selectedElements.forEach((element) => {
@@ -713,7 +745,10 @@
         });
     }
 
-    function languageenglish(){
+    function LanguageEnglish(){
+        document.getElementById("LanguageEnglish").style.backgroundColor = "#ffffffbf";
+        document.getElementById("LanguageKorean").style.backgroundColor = "transparent";
+
 
         const selectedElements = document.querySelectorAll(".entry .korean");
         
@@ -732,7 +767,9 @@
         });
     }
     
-    function languagekorean(){
+    function LanguageKorean(){
+        document.getElementById("LanguageKorean").style.backgroundColor = "#ffffffbf";
+        document.getElementById("LanguageEnglish").style.backgroundColor = "transparent";
         
         const selectedElements = document.querySelectorAll(".entry .korean");
         
