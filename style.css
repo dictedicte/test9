@@ -11,6 +11,7 @@ body{
     background-color: #bda6da;
     font-family: Arial, Helvetica, sans-serif;
     cursor: default;
+    overflow: hidden;
 }
 
 /*SCROLLBAR ↓*/
@@ -1120,3 +1121,4 @@ body{
     }
     
 }
+
