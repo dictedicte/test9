@@ -80,6 +80,7 @@ body{
 .header #settings .settings{
     width: fit-content;
     height: fit-content;
+    max-height: 60vh;
     background-color: #ffffff;
     position: absolute;
     right: 0px;
@@ -97,13 +98,26 @@ body{
     cursor: default;
     padding-top: 6px;
         filter: drop-shadow(0px 1px 2px #a98eca7e);
-
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .header #settings:hover .settings{
     visibility: visible;
     opacity: 1;
     scale: 1;
 }
+
+
+    .header #settings .settings::-webkit-scrollbar-track {
+        background-color: white;
+    }
+    .header #settings .settings::-webkit-scrollbar-thumb {
+        border: solid 5px white;
+    }
+
+
+
+
 .header #settings .settings h2{
     color: #7747b2;
     font-weight: 900;
@@ -130,7 +144,9 @@ body{
     border-radius: 5px;
     overflow: hidden;
     height: fit-content;
-    filter: drop-shadow(0.25px 0.25px 2px #a98eca57);
+    min-height: 50px;
+        filter: drop-shadow(0.25px 0.25px 2px #a98eca57);
+
 }
 
 .header #settings .settings p{
@@ -168,6 +184,24 @@ body{
     top: 6.5px;
     box-sizing: border-box;
 }
+/*
+.header #settings .settings button b::after{
+    content: "";
+    position: absolute;
+    outline:solid 1px transparent;
+    background-color: transparent;
+    border-radius: 100%;
+    border:solid  3px transparent;
+    width: 12px;
+    height: 12px;
+    left: -2.25px;
+    top: -2.25px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition-duration: 0.3s;
+    scale: 0;
+}
+    */
 .header #settings .settings button:hover{
     background-color: #af93cf;
 }
@@ -175,6 +209,14 @@ body{
     border-color: #af93cf;
 }
 
+/*
+.header #settings .settings button:hover b::after{
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.15);
+    opacity: 1;
+    scale: 0.6;
+}
+    */
 
 /*HEADER ↑*/
 
@@ -1078,4 +1120,3 @@ body{
     }
     
 }
-
